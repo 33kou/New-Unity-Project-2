@@ -23,7 +23,7 @@ public class test : MonoBehaviour
 		vec2_angle_fix = sortRect2DVectors (vec2_angle_fix);
 		display2dVector(vec2);
 
-		Input.location.lastData.latitude;
+		//Input.location.lastData.latitude;
     }
 
 
