@@ -1,8 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\fixed.cs">
     <Files>
       <File FileName="Assets\script.cs" Line="4" Column="21" />
+      <File FileName="Assets\cameraview.cs" Line="4" Column="24" />
+      <File FileName="Assets\test.cs" Line="26" Column="5" />
+      <File FileName="Assets\fixed.cs" Line="126" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
