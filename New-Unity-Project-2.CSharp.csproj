@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\MapGenerator.cs" />
+    <Compile Include="Assets\fixed.cs" />
     <Compile Include="Assets\script.cs" />
     <Compile Include="Assets\test.cs" />
   </ItemGroup>

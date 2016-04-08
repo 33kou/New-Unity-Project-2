@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class script : MonoBehaviour
+public class fix : MonoBehaviour
 {
     public GameObject wallPrehub;
     public GameObject floorPrehub;
