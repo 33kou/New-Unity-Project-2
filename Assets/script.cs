@@ -7,6 +7,7 @@ public class scripts : MonoBehaviour {
 	static private int CHECKPOINT_NUMBR=4;
 	private double[,] vector2_original=new double[CHECKPOINT_NUMBR,2];
 	private int[,] vector2_fixed=new int[CHECKPOINT_NUMBR,2];
+    private Vector2[] vec2_fixed = new Vector2[CHECKPOINT_NUMBR];
 	private int index=0;
 	// Use this for initialization
 	void Start () {
