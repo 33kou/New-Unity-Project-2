@@ -123,7 +123,7 @@ public class fix : MonoBehaviour
             vec2[index].x = fixedx;
             vec2[index].y = fixedy;
         }
-        return vector2_fixed;
+        //return vector2_fixed;
 
     }
 

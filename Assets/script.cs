@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class script : MonoBehaviour {
+public class scripts : MonoBehaviour {
 	public GameObject wallPrehub;
 	public GameObject floorPrehub;
 	static private int CHECKPOINT_NUMBR=4;
