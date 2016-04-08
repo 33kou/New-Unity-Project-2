@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C90E7179-C988-D678-E424-F42F165359BD}</ProjectGuid>
+    <ProjectGuid>{CA3419F6-19AB-ECA7-4CFF-84622FDF4F9F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -48,7 +48,6 @@
      <Compile Include="Assets\MapGenerator.cs" />
      <Compile Include="Assets\fixed.cs" />
      <Compile Include="Assets\script.cs" />
-     <Compile Include="Assets\test.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
