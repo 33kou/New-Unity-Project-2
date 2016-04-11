@@ -48,7 +48,7 @@
      <Compile Include="Assets\MapGenerator.cs" />
      <Compile Include="Assets\TestButton.cs" />
      <Compile Include="Assets\cameraview.cs" />
-     <Compile Include="Assets\fixed.cs" />
+     <Compile Include="Assets\fixedscript.cs" />
      <Compile Include="Assets\script.cs" />
      <Compile Include="Assets\test.cs" />
  <Reference Include="UnityEngine.UI">
