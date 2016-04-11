@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class fix : MonoBehaviour
+public class fixedscript : MonoBehaviour
 {
     public GameObject wallPrehub;
     public GameObject floorPrehub;
@@ -15,79 +15,72 @@ public class fix : MonoBehaviour
     {
         setOriginalVector2();
         setFixedVector2(vector2_original);
+		display2dVector (vec2);
+		float angle = getAngle ();
+		vec2 = RotationalTransfer2D (vec2, angle);
+		sortRect2DVectors (vec2);
+		display2dVector (vec2);
     }
 
 
-    int[,] sortRect2DVectors(int[,] vectors_2d)
+	void sortRect2DVectors(Vector2[] vectors_2d)
     { //左上、左下、右下、右上に並べる
-        int x1, x2, x3, x4;
-        int y1, y2, y3, y4;
+      
         int tempx, tempy;
         for (int i = 0; i < CHECKPOINT_NUMBER - 1; i++)
         {
             for (int j = 1; j < CHECKPOINT_NUMBER; j++)
             {
-                if (vectors_2d[i, 0] > vectors_2d[j, 0])
+                if (vectors_2d[i].x > vectors_2d[j].x)
                 {
-                    tempx = vectors_2d[i, 0];
-                    tempy = vectors_2d[i, 1];
-                    vectors_2d[i, 0] = vectors_2d[i + 1, 0];
-                    vectors_2d[i, 1] = vectors_2d[i + 1, 1];
-                    vectors_2d[i + 1, 0] = tempx;
-                    vectors_2d[i + 1, 1] = tempy;
+					tempx = (int)vectors_2d[i].x;
+					tempy = (int)vectors_2d[i].y;
+                    vectors_2d[i].x = vectors_2d[j].x;
+                    vectors_2d[i].y = vectors_2d[j].y;
+                    vectors_2d[j].x = tempx;
+                    vectors_2d[j].y = tempy;
                 }
             }
         }
-        if (vectors_2d[0, 1] < vectors_2d[1, 1])
+		if (vectors_2d[0].y < vectors_2d[1].y)
         {
-            tempx = vectors_2d[0, 0];
-            tempy = vectors_2d[0, 1];
-            vectors_2d[0, 0] = vectors_2d[1, 0];
-            vectors_2d[0, 1] = vectors_2d[1, 1];
-            vectors_2d[1, 0] = tempx;
-            vectors_2d[1, 1] = tempy;
+			tempx = (int)vectors_2d[0].x;
+			tempy = (int)vectors_2d[0].y;
+			vectors_2d[0].x = vectors_2d[1].x;
+			vectors_2d[0].y = vectors_2d[1].y;
+			vectors_2d[1].x = tempx;
+			vectors_2d[1].y = tempy;
         }
-        if (vectors_2d[2, 1] > vectors_2d[3, 1])
+		if (vectors_2d[2].y > vectors_2d[3].y)
         {
-            tempx = vectors_2d[2, 0];
-            tempy = vectors_2d[2, 1];
-            vectors_2d[2, 0] = vectors_2d[3, 0];
-            vectors_2d[2, 1] = vectors_2d[3, 1];
-            vectors_2d[3, 0] = tempx;
-            vectors_2d[3, 1] = tempy;
+			tempx =(int) vectors_2d[2].x;
+			tempy = (int)vectors_2d[2].y;
+			vectors_2d[2].x = vectors_2d[3].x;
+			vectors_2d[2].y = vectors_2d[3].y;
+			vectors_2d[3].x = tempx;
+			vectors_2d[3].y = tempy;
         }
 
+		this.vec2 = vectors_2d;
 
-
-        int minx_index = getMinXIndex(vectors_2d);
-        int maxx_index = getMaxXIndex(vectors_2d);
-        int miny_index = getMinYIndex(vectors_2d);
-        int maxy_index = getMaxYIndex(vectors_2d);
-
-        x1 = x2 = vectors_2d[minx_index, 0];
-        x3 = x4 = vectors_2d[maxx_index, 0];
-        y1 = y4 = vectors_2d[maxy_index, 1];
-        y2 = y3 = vectors_2d[miny_index, 1];
-        int[,] vectors_sorted = { { x1, y1 }, { x2, y2 }, { x3, y3 }, { x4, y4 } };
-        return vectors_sorted;
     }
 
-    void display2dVector(int[,] v2)
+    void display2dVector(Vector2[] v2)
     {
         for (int i = 0; i < 4; i++)
         {
-            Debug.Log(v2[i, 0] + "," + v2[i, 1]);
+			Debug.Log(v2[i].ToString());
         }
     }
 
-    int[,] RotationalTransfer2D(int[,] vector2_fixed, float angle)
+	Vector2[] RotationalTransfer2D(Vector2[] vector2_fixed, float angle)
     {
         for (int i = 0; i < CHECKPOINT_NUMBER; i++)
         {
-            int x = vector2_fixed[i, 0];
-            int y = vector2_fixed[i, 1];
-            vector2_fixed[i, 0] = (int)(x * Mathf.Cos(angle) - y * Mathf.Sin(angle));
-            vector2_fixed[i, 1] = (int)(x * Mathf.Sin(angle) + y * Mathf.Cos(angle));
+			int x = (int)vector2_fixed[i].x;
+			int y = (int)vector2_fixed[i].y;
+			vector2_fixed[i].x = (int)(x * Mathf.Cos(angle) - y * Mathf.Sin(angle));
+            vector2_fixed[i].y = (int)(x * Mathf.Sin(angle) + y * Mathf.Cos(angle));
         }
         return vector2_fixed;
 
