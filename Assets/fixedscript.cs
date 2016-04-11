@@ -29,7 +29,7 @@ public class fixedscript : MonoBehaviour
         int tempx, tempy;
         for (int i = 0; i < CHECKPOINT_NUMBER - 1; i++)
         {
-            for (int j = 1; j < CHECKPOINT_NUMBER; j++)
+			for (int j = i + 1; j < CHECKPOINT_NUMBER; j++)
             {
                 if (vectors_2d[i].x > vectors_2d[j].x)
                 {
@@ -75,12 +75,13 @@ public class fixedscript : MonoBehaviour
 
 	Vector2[] RotationalTransfer2D(Vector2[] vector2_fixed, float angle)
     {
+		float rad = Mathf.Deg2Rad * angle;
         for (int i = 0; i < CHECKPOINT_NUMBER; i++)
         {
 			int x = (int)vector2_fixed[i].x;
 			int y = (int)vector2_fixed[i].y;
-			vector2_fixed[i].x = (int)(x * Mathf.Cos(angle) - y * Mathf.Sin(angle));
-            vector2_fixed[i].y = (int)(x * Mathf.Sin(angle) + y * Mathf.Cos(angle));
+			vector2_fixed[i].x = (int)(x * Mathf.Cos(rad) - y * Mathf.Sin(rad));
+            vector2_fixed[i].y = (int)(x * Mathf.Sin(rad) + y * Mathf.Cos(rad));
         }
         return vector2_fixed;
 
