@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\fixed.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GPSLoader.cs">
     <Files>
-      <File FileName="Assets\script.cs" Line="4" Column="21" />
-      <File FileName="Assets\cameraview.cs" Line="4" Column="24" />
-      <File FileName="Assets\test.cs" Line="26" Column="5" />
-      <File FileName="Assets\fixed.cs" Line="126" Column="11" />
+      <File FileName="Assets\GPSLoader.cs" Line="64" Column="4" />
+      <File FileName="Assets\script.cs" Line="1" Column="1" />
+      <File FileName="Assets\cameraview.cs" Line="1" Column="1" />
+      <File FileName="Assets\test.cs" Line="1" Column="1" />
+      <File FileName="Assets\TestButton.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

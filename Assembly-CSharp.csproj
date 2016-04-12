@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GPSLoader.cs" />
      <Compile Include="Assets\MapGenerator.cs" />
      <Compile Include="Assets\TestButton.cs" />
      <Compile Include="Assets\cameraview.cs" />
